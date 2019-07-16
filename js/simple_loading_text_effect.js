@@ -1,4 +1,11 @@
 
+const working = true
+
+const background = document.getElementsByClassName('page-background')[0];
+const loading_text = document.getElementsByClassName('loading-text')[0];
+
+if (working) background.classList.add('d-none')
+if (working) loading_text.classList.remove('text-white')
 
 var phrase = ""
 
