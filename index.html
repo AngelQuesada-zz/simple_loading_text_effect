@@ -71,13 +71,20 @@
         if(activated){
             btn.classList.remove('activated')
             btn.innerHTML = "Start effect"
-            //Activate the effect
-            btn.stop_simple_loading_text_effect()
+            //stops the effect
+            loading_text.stop_simple_loading_text_effect()
         }else{
             btn.classList.add('activated')
             btn.innerHTML = "Stop effect"
-            //Stops the effect
-            btn.start_simple_loading_text_effect()
+            let default_options = {
+              speed: 1,
+              characters: [
+                  "$","&","%","#","@"
+              ],
+              change_spaces: false,
+            }
+            //start the effect
+            loading_text.start_simple_loading_text_effect(default_options)
         }
 
       })
